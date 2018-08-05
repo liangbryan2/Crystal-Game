@@ -7,32 +7,88 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"></link>
     <title>Crystal Game</title>
 </head>
 
 <body>
-    <header>
-        <p>Crystals Collector!</p>
-    </header>
-    <div class="instructions">
-        <p>Instructions</p>
+    <div class="container">
+        <header class="jumbotron">
+            <p class="display-4">Crystals Collector!</p>
+        </header>
+        <div class="row">
+            <div class="instructions col-md-6 transparent">
+                <p>You are given a random Goal at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your
+                    total Score.</p>
+                <p>You win the game by matching your total Score with the Goal. If your total Score goes above the Goal, you
+                    lose
+                </p>
+                <p>The value of each crystal is hidden until you click on it.</p>
+                <p>Each time you start a new game, the vlue of the crystal is randomized.</p>
+            </div>
+
+            <div class="treasure col-md-6">
+                <img id="top" src="assets/images/treasure-closed.png" height="300px" width="300px">
+                <!-- <img class="bottom" src="assets/images/treasure-open.png"  height="300px" width="300px"> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Wins:
+                    <span id="wins">0</span>
+                </p>
+                <p>Losses:
+                    <span id="losses">0</span>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="goal">
+                    <p>Goal:
+                        <span id="goal"></span>
+                    </p>
+                </div>
+                <div class="score">
+                    <p>Score:
+                        <span id="score" value="0">0</span>
+                    </p>
+                </div>
+                <div class="crystals">
+                    <img src="assets/images/red.png" class="button" id="red" value=""></img>
+                    <img src="assets/images/blue.png" class="button" id="blue" value=""></img>
+                    <img src="assets/images/yellow.png" class="button" id="yellow" value=""></img>
+                    <img src="assets/images/green.png" class="button" id="green" value=""></img>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <p id="goal" value="">Goal</p>
     </div>
-    <div class="score">
-        <p>Wins: <span id="wins">0</span></p>
-        <p>Losses: <span id="losses">0</span></p>
-    </div>
-    <div class="crystals">
-        <img src="assets/images/red.png" class="button" id="red" value=""></img>
-        <img src="assets/images/blue.png"class="button" id="blue" value=""></img>
-        <img src="assets/images/yellow.png"class="button" id="yellow" value=""></img>
-        <img src="assets/images/green.png"class="button" id="green" value=""></img>
-    </div>
-    <div class="score">
-        <p>Score: <span id="score" value="0">0</span></p>
+    <div class="gems">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </body>
 

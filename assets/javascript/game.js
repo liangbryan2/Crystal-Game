@@ -33,6 +33,8 @@ var game = {
     checkIfWin: function (goal, score) {
         if (game.goal === game.score) {
             game.wins++;
+            $("#top").attr("src", "assets/images/treasure-open.png");
+            $(".loader span").show();
             game.initialize();
         }
         if (game.goal <= game.score) {
@@ -56,17 +58,25 @@ var game = {
         $(".button").val(0);
         game.setCrystalValue();
         game.newGame = false;
+        randomGem();
     }
 
 };
 
-
+function randomGem() {
+    var gems = ["red", "blue", "yellow", "green"];
+    var gem = gems[Math.floor(Math.random() * gems.length)];
+    return "url(\"assets/images/" + gem + "icon.png\")";
+}
 
 $(document).ready(function () {
+    $(".loader span").css("background", randomGem());
+    $(".loader span").hide();
     game.initialize();
     $(".button").on("click", function () {
+        $(".loader span").hide();
+        $("#top").attr("src", "assets/images/treasure-closed.png");
         game.addScore(this.value);
         game.checkIfWin();
     });
-
 });
