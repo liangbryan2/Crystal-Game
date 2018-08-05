@@ -58,7 +58,7 @@ var game = {
         $(".button").val(0);
         game.setCrystalValue();
         game.newGame = false;
-        randomGem();
+        $(".loader span").css("background", randomGem());
     }
 
 };
