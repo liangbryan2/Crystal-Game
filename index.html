@@ -20,14 +20,14 @@
         </header>
         <div class="row">
             <div class="instructions col-md-6 transparent">
-                <p>You are given a random Goal at the start of the game.</p>
-                <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your
+                <p id="instructions">You are given a random Goal at the start of the game.</p>
+                <p id="instructions">There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your
                     total Score.</p>
-                <p>You win the game by matching your total Score with the Goal. If your total Score goes above the Goal, you
-                    lose
+                <p id="instructions">You win the game by matching your total Score with the Goal. If your total Score goes above the Goal, you
+                    lose.
                 </p>
-                <p>The value of each crystal is hidden until you click on it.</p>
-                <p>Each time you start a new game, the vlue of the crystal is randomized.</p>
+                <p id="instructions">The value of each crystal is hidden until you click on it.</p>
+                <p id="instructions">Each time you start a new game, the value of the crystal is randomized.</p>
             </div>
 
             <div class="treasure col-md-6">
@@ -55,7 +55,7 @@
                         <span id="score" value="0">0</span>
                     </p>
                 </div>
-                <div class="crystals">
+                <div id="crystals">
                     <img src="assets/images/red.png" class="button" id="red" value=""></img>
                     <img src="assets/images/blue.png" class="button" id="blue" value=""></img>
                     <img src="assets/images/yellow.png" class="button" id="yellow" value=""></img>

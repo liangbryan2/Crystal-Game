@@ -4,9 +4,15 @@ body {
 }
 
 p {
+    font-family: Treamd;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+}
+
+#instructions {
+    font-family: sans-serif;
+    font-size: 18px;
 }
 
 .jumbotron {
@@ -19,18 +25,57 @@ p {
 }
 
 .transparent {
-    background:rgba(66, 63, 63, 0.5);
+    background: rgba(66, 63, 63, 0.5);
 }
 
 .button {
     height: 100px;
     width: 100px;
-
 }
 
-.instructions {
-    
+#red:hover {
+    cursor: pointer;
+    animation: bounce 1s;
 }
+
+#blue:hover {
+    cursor: pointer;
+    animation: bounce 1s;
+}
+
+#yellow:hover {
+    cursor: pointer;
+    animation: bounce 1s;
+}
+
+#green:hover {
+    cursor: pointer;
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px)
+    }
+    60% {
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+}
+
+/* Animation for falling gems */
 
 .gems {
     z-index: -1;
@@ -132,4 +177,77 @@ p {
         opacity: 0;
         -webkit-transform: translate(150px, 800px) rotateZ(360deg);
     }
+}
+
+/* Glowing animation for the gems */
+
+#red {
+    margin: 10px;
+    padding: 0;
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 9px 4px red; */
+    filter: drop-shadow(0 0 10px rgb(247, 120, 120));
+    animation: redglow 1.5s linear infinite alternate;
+}
+
+@keyframes redglow {
+    to {
+        /* box-shadow: 0px 0px 12px 8px red; */
+        filter: drop-shadow(0 0 25px red);
+    }
+}
+
+#blue {
+    margin: 10px;
+    padding: 0;
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 9px 4px red; */
+    filter: drop-shadow(0 0 10px rgb(113, 110, 248));
+    animation: blueglow 1.5s linear infinite alternate;
+}
+
+@keyframes blueglow {
+    to {
+        /* box-shadow: 0px 0px 12px 8px red; */
+        filter: drop-shadow(0 0 25px blue);
+    }
+}
+
+#yellow {
+    margin: 10px;
+    padding: 0;
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 9px 4px red; */
+    filter: drop-shadow(0 0 10px rgb(243, 234, 103));
+    animation: yellowglow 1.5s linear infinite alternate;
+}
+
+@keyframes yellowglow {
+    to {
+        /* box-shadow: 0px 0px 12px 8px red; */
+        filter: drop-shadow(0 0 25px yellow);
+    }
+}
+
+#green {
+    margin: 10px;
+    padding: 0;
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 9px 4px red; */
+    filter: drop-shadow(0 0 10px rgb(148, 252, 99));
+    animation: greenglow 1.5s linear infinite alternate;
+}
+
+@keyframes greenglow {
+    to {
+        /* box-shadow: 0px 0px 12px 8px red; */
+        filter: drop-shadow(0 0 25px green);
+    }
+}
+
+/* A font I found online */
+
+@font-face {
+    font-family: Treamd;
+    src: url("../fonts/Treamd.ttf");
 }
